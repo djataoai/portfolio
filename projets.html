@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projets – Aïchatou Djataou</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    .container-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 50px;
+      align-items: flex-start; /* aligne le haut du texte et des images */
+    }
+
+    .project-text {
+      flex: 1 1 45%;
+    }
+
+    .project-images {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start; /* images alignées au top */
+    }
+
+    .project-img {
+      max-width: 100%;
+      max-height: 300px; /* réduit légèrement la taille des images */
+      object-fit: cover; /* garde les proportions et remplit l'espace */
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .project-container {
+        flex-direction: column;
+      }
+
+      .project-text, .project-images {
+        flex: 1 1 100%;
+      }
+
+      .project-images {
+        align-items: center; /* centre les images sur petit écran */
+      }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container-page">
+    <h1>Mes Projets</h1>
+
+    <!-- Projet 1 -->
+    <div class="project-container">
+      <div class="project-text">
+        <h2>Génération de ville artificielle par IA générative</h2>
+        <p>
+          Loin des dystopies de science-fiction, taxis volants, drones et nouvelles mobilités aériennes 
+          commencent déjà à transformer nos villes. Mais comment tester ces engins dans des environnements réalistes ?
+        </p>
+        <p>
+          C’était la problématique de mon stage de recherche. J’ai travaillé sur la création d’une 
+          <strong>ville artificielle</strong> à l’aide de modèles de diffusion (DDPM, la même technologie que DALL·E).<br>
+          Étape 1 : génération de la distribution des sols et de l’élévation.<br>
+          Étape 2 : reproduction des bâtiments et routes à partir de données OpenStreetMap.
+        </p>
+      </div>
+      <div class="project-images">
+        <img src="55aa251f30f9160fbb294c1762159cc1.jpg" alt="Ville artificielle IA" class="project-img"/>
+      </div>
+    </div>
+
+    <!-- Projet 2 -->
+    <div class="project-container">
+      <div class="project-text">
+        <h2>Supervision d’antennes ADS-B en Java</h2>
+        <p>
+          Un superviseur d’antenne ADS-B permet de visualiser les antennes disponibles et de récupérer 
+          en temps réel les informations transmises par les avions (position, code OACI, trajectoire, etc.).
+        </p>
+        <p>
+          Dans le cadre d’un projet de classe en 2ᵉ année à l’ENAC, j’ai participé à la conception d’une application en Java :
+          récupération des données ADS-B via une base MongoDB et affichage en temps réel sur un tableau et une carte interactive.
+        </p>
+      </div>
+      <div class="project-images">
+        <img src="Screenshot From 2025-09-18 10-23-07.png" alt="Supervision ADS-B" class="project-img"/>
+      </div>
+    </div>
+
+    <!-- Projet 3 -->
+    <div class="project-container">
+      <div class="project-text">
+        <h2>Détection de conflits aériens par évolution différentielle</h2>
+        <p>
+          Le trafic aérien double environ tous les quinze ans. Dans ce contexte, la prévention des conflits aériens est cruciale 
+          pour assurer la sécurité tout en réduisant la charge de travail des contrôleurs aériens.
+        </p>
+        <p>
+          Dans un projet d’intelligence artificielle à l’ENAC, j’ai contribué au développement d’un outil utilisant 
+          <strong>l’évolution différentielle</strong>, une métaheuristique d’optimisation, afin d’optimiser en continu 
+          la distance entre avions et détecter les conflits le plus tôt possible.
+        </p>
+      </div>
+      <div class="project-images">
+        <img src="Screenshot From 2025-09-18 10-27-20.png" alt="Conflits aériens" class="project-img"/>
+      </div>
+    </div>
+
+    <!-- Projet 4 -->
+    <div class="project-container">
+      <div class="project-text">
+        <h2>Traitement de vidéos en Python avec OpenCV</h2>
+        <p>
+          L’abondance des données issues de la vidéosurveillance pose un défi majeur. 
+          L’algorithme de <strong>background subtraction</strong> permet de soustraire l’arrière-plan 
+          et de détecter les éléments en mouvement.
+        </p>
+        <p>
+          J’ai implémenté cet algorithme en Python avec OpenCV. La méthode repose sur une distribution gaussienne 
+          des pixels pour déterminer si un point appartient au fond ou à un objet en mouvement.
+        </p>
+      </div>
+      <div class="project-images">
+        <img src="Screenshot From 2025-09-18 10-29-05.png" alt="Traitement vidéo OpenCV" class="project-img"/>
+      </div>
+    </div>
+
+    <!-- Projet 5 -->
+    <div class="project-container">
+      <div class="project-text">
+        <h2>Calcul et optimisation de la température d’une portion de ville en Python</h2>
+        <p>
+          60°C au sol en été sur une place publique française : mythe ou réalité ?
+        </p>
+        <p>
+          À partir d’articles scientifiques, j’ai trouvé une relation entre la température de chaque surface 
+          et ses caractéristiques physiques (émissivité, flux thermique, radiosité). 
+          J’ai utilisé Python et Numpy pour les calculs matriciels et obtenu la température globale.
+        </p>
+        <p>
+          J’ai ensuite testé différentes optimisations : plantation d’arbres, remplacement du goudron par de l’herbe, 
+          ajout d’un point d’eau. L’optimisation a été réalisée grâce à la méthode du <strong>recuit simulé</strong>.
+        </p>
+      </div>
+      <div class="project-images">
+        <img src="Screenshot From 2025-09-18 10-36-03.png" alt="Optimisation thermique ville" class="project-img"/>
+         <img src="Screenshot From 2025-09-18 10-36-27.png" alt="Optimisation thermique ville" class="project-img"/>
+      </div>
+    </div>
+
+    <a href="index.html">← Retour à l'accueil</a>
+  </div>
+</body>
+</html>
