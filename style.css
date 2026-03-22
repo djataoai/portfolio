@@ -191,3 +191,27 @@ body {
   border-radius: 6px;
   object-fit: cover;
 }
+.description {
+  text-align: justify;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+/* CSS pour la colonne des images */
+.project-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;  /* centre horizontalement */
+  align-items: center;      /* centre verticalement */
+  max-height: 500px;        /* limite la hauteur totale de la colonne */
+}
+
+/* CSS pour l'image */
+.project-img {
+  width: auto;              /* largeur automatique selon les proportions */
+  height: 100%;             /* prend toute la hauteur du conteneur */
+  max-width: 100%;          /* ne dépasse pas la colonne */
+  border-radius: 8px;
+  object-fit: cover;        /* garde le ratio et crop si nécessaire */
+  display: block;
+}
